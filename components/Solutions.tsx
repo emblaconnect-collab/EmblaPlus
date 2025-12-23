@@ -50,7 +50,6 @@ const Solutions: React.FC = () => {
               className={`relative bg-slate-900/20 backdrop-blur-xl border rounded-[3.5rem] group overflow-hidden h-[550px] md:h-[650px] transition-all duration-700 shadow-2xl ${
                 activeTab === idx ? 'border-teal-500/50 shadow-teal-500/10' : 'border-white/5 hover:border-teal-500/30'
               }`}
-              aria-label={`${item.title} - ${item.description}`}
             >
               {/* Animated Glow Back */}
               <div className="absolute top-0 right-0 w-48 h-48 bg-teal-500/5 rounded-full blur-[80px] group-hover:bg-teal-500/10 transition-all duration-1000" aria-hidden="true"></div>
