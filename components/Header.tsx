@@ -80,10 +80,10 @@ const Header: React.FC = () => {
 
   return (
     <header 
-      className={`fixed top-0 left-0 w-full z-[10000] transition-all duration-500 ease-in-out ${
+      className={`fixed top-0 left-0 w-full z-[10000] transition-all duration-500 ease-in-out h-[88px] md:h-[112px] flex items-center ${
         isScrolled 
-          ? 'bg-slate-950/80 backdrop-blur-2xl py-4 border-b border-white/5 shadow-2xl' 
-          : 'bg-transparent py-8 md:py-10 border-b border-transparent'
+          ? 'bg-slate-950/80 backdrop-blur-2xl border-b border-white/5 shadow-2xl' 
+          : 'bg-transparent border-b border-transparent'
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
