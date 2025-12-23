@@ -5,7 +5,7 @@ const steps: Step[] = [
   { number: "01", title: "Imersão", description: "Mergulhamos no seu mercado para entender a dor real do cliente.", delay: 0 },
   { number: "02", title: "Narrativa", description: "Construímos uma mensagem clara que elimina objeções imediatamente.", delay: 150 },
   { number: "03", title: "Arquitetura", description: "Desenhamos fluxos de conversão baseados em psicologia digital.", delay: 300 },
-  { number: "04", title: "Execução", description: "Desenvolvimento técnico impecável com design internacional.", delay: 450 },
+  { number: "04", title: "Execução", description: "Desenvolvimento técnico impecável com design profissional.", delay: 450 },
   { number: "05", title: "Sucesso", description: "Lançamento estratégico e otimização contínua baseada em dados.", delay: 600 }
 ];
 
