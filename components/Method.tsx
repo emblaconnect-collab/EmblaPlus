@@ -35,7 +35,9 @@ const Method: React.FC = () => {
       <div className="container mx-auto px-6 mb-12 md:mb-32">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 md:gap-12">
           <div className="max-w-2xl">
-            <span className="text-teal-500 font-bold uppercase tracking-[0.3em] text-xs mb-4 block">Metodologia Embla</span>
+            <span className="text-teal-500 font-bold uppercase tracking-[0.3em] text-xs mb-4 block">
+              Metodologia Embla
+            </span>
             <h2 className="text-4xl md:text-7xl font-serif font-bold text-white mb-6">
               O Caminho para <br />
               <span className="text-teal-600">Resultados Claros.</span>
