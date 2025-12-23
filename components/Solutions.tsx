@@ -57,8 +57,8 @@ const Solutions: React.FC = () => {
               {/* Standard Content Face */}
               <button
                 onClick={() => setActiveTab(activeTab === idx ? null : idx)}
-                className={`p-10 md:p-14 h-full flex flex-col transition-all duration-700 ease-in-out w-full text-left ${
-                  activeTab === idx ? 'opacity-0 -translate-y-20 blur-xl scale-90 pointer-events-none' : 'opacity-100 group-hover:scale-[0.98]'
+                className={`p-10 md:p-14 h-full flex flex-col w-full text-left transition-opacity duration-300 ${
+                  activeTab === idx ? 'opacity-0 pointer-events-none' : 'opacity-100'
                 }`}
                 aria-expanded={activeTab === idx}
               >
@@ -88,7 +88,7 @@ const Solutions: React.FC = () => {
               </button>
 
               {/* Specification Layer Face */}
-              <div className={`absolute inset-0 bg-slate-950/95 backdrop-blur-[40px] p-10 md:p-16 flex flex-col transition-all duration-700 ease-out border-t-2 border-teal-500/20 ${
+              <div className={`absolute inset-0 bg-slate-950/95 backdrop-blur-[40px] p-10 md:p-16 flex flex-col transition-all duration-300 border-t-2 border-teal-500/20 ${
                 activeTab === idx ? 'translate-y-0 opacity-100 pointer-events-auto' : 'translate-y-full opacity-0 pointer-events-none'
               }`}>
                 {/* Visual Pull Bar for context */}
