@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embla | Estúdio de Presença Digital Estratégica</title>
+    <meta name="description" content="Embla é um estúdio de presença digital estratégica especializado em criar experiências digitais únicas que conectam marcas ao seu público através de estratégia, design e tecnologia.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.imgur.com/zT0c60B.png">
+    
+    <!-- Preconnects para melhorar performance -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://esm.sh">
+    <link rel="dns-prefetch" href="https://i.imgur.com">
+    <link rel="dns-prefetch" href="https://res.cloudinary.com">
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
+    
+    <!-- Preload de recursos críticos -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800;900&display=swap">
+    <link rel="modulepreload" href="/index.tsx">
+    
+    <!-- Fonts com display=swap para evitar FOIT -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind com defer para não bloquear renderização -->
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    
+    <style>
+        :root {
+            --petrol-black: #020617;
+            --petrol-deep: #0f172a;
+            --teal-medium: #14b8a6;
+            --teal-light: #2dd4bf;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--petrol-black);
+            color: #f8fafc;
+            overflow-x: hidden;
+            -webkit-tap-highlight-color: transparent;
+        }
+        h1, h2, h3, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        ::selection {
+            background-color: var(--teal-medium);
+            color: white;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--petrol-black);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--teal-medium);
+        }
+
+        /* Menu Mobile Customizado (Clean & No-Scroll) */
+        .embla-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 9998;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .embla-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .embla-mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 85%;
+            max-width: 380px;
+            height: 100dvh;
+            background: rgba(2, 6, 23, 0.98);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            z-index: 9999;
+            transition: right 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            padding: 5rem 1.5rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-left: 1px solid rgba(45, 212, 191, 0.1);
+            box-shadow: -20px 0 60px rgba(0,0,0,0.9);
+            overflow: hidden;
+        }
+        .embla-mobile-menu.active {
+            right: 0;
+        }
+
+        /* Feedback tátil para botões no mobile */
+        .btn-active-state:active {
+            transform: scale(0.96);
+            filter: brightness(0.9);
+        }
+
+        /* Scanline para Logo - Otimizado */
+        @keyframes scanline {
+            0% { transform: translate3d(0, -100%, 0); opacity: 0; }
+            50% { opacity: 0.3; }
+            100% { transform: translate3d(0, 100%, 0); opacity: 0; }
+        }
+        .tech-scan-logo {
+            position: relative;
+            overflow: hidden;
+        }
+        .tech-scan-logo::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; 
+            width: 100%; height: 20%;
+            background: linear-gradient(to bottom, transparent, rgba(45, 212, 191, 0.4), transparent);
+            animation: scanline 4s infinite linear;
+            pointer-events: none;
+            will-change: transform;
+        }
+
+        /* Reveal Section Performance - Otimizado */
+        .reveal-section {
+            opacity: 0;
+            transform: translate3d(0, 20px, 0);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+                        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-section.is-visible {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+        
+        /* Remover will-change depois da animação */
+        .reveal-section.is-visible {
+            will-change: auto;
+        }
+
+        /* Melhor contraste para acessibilidade */
+        .text-slate-400 {
+            color: #cbd5e1 !important;
+        }
+        .text-slate-300 {
+            color: #e2e8f0 !important;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "@formspree/react": "https://esm.sh/@formspree/react@^3.0.0"
+  }
+}
+</script>
+<!-- Script React com defer para não bloquear -->
+<script type="module" src="/index.tsx" defer></script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
