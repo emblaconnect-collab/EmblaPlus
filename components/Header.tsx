@@ -149,9 +149,9 @@ const Header: React.FC = () => {
             <X size={24} />
           ) : (
             <>
-              <span className="w-6 h-0.5 bg-current rounded-full"></span>
-              <span className="w-5 h-0.5 bg-current rounded-full ml-1"></span>
-              <span className="w-6 h-0.5 bg-current rounded-full"></span>
+              <span className="w-6 h-0.5 bg-current rounded-full" aria-hidden="true"></span>
+              <span className="w-5 h-0.5 bg-current rounded-full ml-1" aria-hidden="true"></span>
+              <span className="w-6 h-0.5 bg-current rounded-full" aria-hidden="true"></span>
             </>
           )}
         </button>
