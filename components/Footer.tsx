@@ -153,7 +153,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="pt-10 border-t border-slate-900/50 flex flex-col md:flex-row justify-between items-center gap-4 text-center">
-          <p className="text-slate-500 text-[9px] uppercase font-bold tracking-[0.2em]">
+          <p className="text-slate-400 text-[9px] uppercase font-bold tracking-[0.2em]">
             © {year} Embla Estúdio Digital. Todos os direitos reservados.
           </p>
         </div>
