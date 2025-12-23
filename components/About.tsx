@@ -47,6 +47,7 @@ const AnimatedNumber: React.FC<{ value: string }> = ({ value }) => {
       if (!startTime) startTime = timestamp;
       const progress = Math.min((timestamp - startTime) / duration, 1);
       const easedProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+
       setDisplayValue(Math.floor(easedProgress * numericTarget));
 
       if (progress < 1) {
@@ -61,7 +62,7 @@ const AnimatedNumber: React.FC<{ value: string }> = ({ value }) => {
   }, [isVisible, numericTarget]);
 
   return (
-    <span ref={containerRef} aria-label={`${value} ${suffix ? suffix : ''}`}>
+    <span ref={containerRef} aria-label={`${value}${suffix ? ' ' + suffix : ''}`}>
       {displayValue}{suffix}
     </span>
   );
@@ -73,7 +74,9 @@ const About: React.FC = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12 md:gap-24">
           <div className="flex-1">
-            <span className="text-teal-500 font-bold uppercase tracking-[0.3em] text-xs mb-4 block">Sobre a Embla</span>
+            <span className="text-teal-500 font-bold uppercase tracking-[0.3em] text-xs mb-4 block">
+              Sobre a Embla
+            </span>
             <h2 className="text-4xl md:text-8xl font-serif font-bold text-white mb-6 md:mb-10 leading-tight">
               Clareza acima <br />
               <span className="text-teal-600">da decoração.</span>
