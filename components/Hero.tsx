@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-teal-400"></span>
               </span>
             </div>
-            <span className="text-teal-400 font-black uppercase tracking-[0.4em] text-[8px] md:text-[9px] whitespace-nowrap">
+            <span className="text-teal-300 font-black uppercase tracking-[0.4em] text-[8px] md:text-[9px] whitespace-nowrap">
               Estúdio de Estratégia Digital
             </span>
           </div>
@@ -76,14 +76,6 @@ const Hero: React.FC = () => {
               aria-label="Conhecer a Metodologia Embla"
             >
               Metodologia Embla
-            </a>
-            <a 
-              href="#portfolio" 
-              onClick={(e) => handleScrollToSection(e, 'portfolio')}
-              className="px-10 md:px-12 py-5 border border-white/10 hover:border-teal-500/30 text-white rounded-2xl md:rounded-full font-bold text-center transition-all hover:bg-white/5 active:scale-95 btn-active-state"
-              aria-label="Ver nosso Portfólio de projetos"
-            >
-              Ver Portfólio
             </a>
           </div>
         </div>
