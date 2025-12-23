@@ -52,15 +52,15 @@ const Method: React.FC = () => {
       </div>
 
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8" role="list" aria-label="Etapas da metodologia">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8">
           {steps.map((step, idx) => (
             <article 
               key={idx}
-              role="listitem"
               className={`group relative h-full transition-all duration-1000 ease-out transform ${
                 isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-95'
               }`}
               style={{ transitionDelay: `${step.delay}ms` }}
+              aria-label={`Etapa ${step.number}: ${step.title}`}
             >
               <div className="bg-slate-900/40 border border-white/5 p-8 md:p-10 rounded-[2.5rem] group-hover:border-teal-500/30 transition-all duration-700 h-full flex flex-col hover:shadow-2xl backdrop-blur-sm">
                 <span 
