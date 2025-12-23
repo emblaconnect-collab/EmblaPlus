@@ -76,14 +76,14 @@ const Solutions: React.FC = () => {
                 <h3 className="text-3xl md:text-5xl font-serif font-bold text-white mb-8 leading-tight tracking-tight">
                   {item.title}
                 </h3>
-                <p className="text-slate-300 text-lg md:text-xl leading-relaxed font-light mb-10">
+                <p className="text-slate-300 text-lg md:text-xl leading-relaxed font-light mb-10 min-h-[120px] md:min-h-[140px]">
                   {item.description}
                 </p>
                 
                 <div className="mt-auto flex items-center gap-5 text-teal-400 font-black uppercase tracking-[0.3em] text-[10px] group-hover:text-white transition-colors">
-                  <div className="w-10 h-[1px] bg-teal-500 group-hover:w-16 transition-all duration-500" aria-hidden="true"></div>
-                  <span>Ver Especificações</span>
-                  <ArrowUpRight size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" aria-hidden="true" />
+                  <div className="w-10 h-[1px] bg-teal-500 flex-shrink-0" aria-hidden="true"></div>
+                  <span className="whitespace-nowrap">Ver Especificações</span>
+                  <ArrowUpRight size={18} className="flex-shrink-0 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" aria-hidden="true" />
                 </div>
               </button>
 
