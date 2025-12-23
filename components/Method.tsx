@@ -5,7 +5,7 @@ const steps: Step[] = [
   { number: "01", title: "Imersão", description: "Mergulhamos no seu mercado para entender a dor real do cliente.", delay: 0 },
   { number: "02", title: "Narrativa", description: "Construímos uma mensagem clara que elimina objeções imediatamente.", delay: 150 },
   { number: "03", title: "Arquitetura", description: "Desenhamos fluxos de conversão baseados em psicologia digital.", delay: 300 },
-  { number: "04", title: "Execução", description: "Desenvolvimento técnico impecável com design profissional.", delay: 450 },
+  { number: "04", title: "Execução", description: "Desenvolvimento técnico impecável com design internacional.", delay: 450 },
   { number: "05", title: "Sucesso", description: "Lançamento estratégico e otimização contínua baseada em dados.", delay: 600 }
 ];
 
@@ -56,10 +56,7 @@ const Method: React.FC = () => {
           {steps.map((step, idx) => (
             <article 
               key={idx}
-              className={`group relative h-full transition-all duration-1000 ease-out transform ${
-                isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-12 scale-95'
-              }`}
-              style={{ transitionDelay: `${step.delay}ms` }}
+              className="group relative h-full"
               aria-label={`Etapa ${step.number}: ${step.title}`}
             >
               <div className="bg-slate-900/40 border border-white/5 p-8 md:p-10 rounded-[2.5rem] group-hover:border-teal-500/30 transition-all duration-700 h-full flex flex-col hover:shadow-2xl backdrop-blur-sm">
