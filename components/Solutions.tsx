@@ -60,8 +60,8 @@ const Solutions: React.FC = () => {
                 className={`p-10 md:p-14 h-full flex flex-col transition-all duration-700 ease-in-out w-full text-left ${
                   activeTab === idx ? 'opacity-0 -translate-y-20 blur-xl scale-90 pointer-events-none' : 'opacity-100 group-hover:scale-[0.98]'
                 }`}
-                aria-label={`Ver especificações de ${item.title}`}
                 aria-expanded={activeTab === idx}
+                aria-labelledby={`solution-title-${idx}`}
               >
                 <div className="relative mb-12">
                   <div className="w-20 h-20 bg-slate-800/40 rounded-[2.5rem] flex items-center justify-center border border-white/10 relative z-10">
@@ -74,7 +74,7 @@ const Solutions: React.FC = () => {
                   <div className="absolute -inset-2 bg-teal-500/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true"></div>
                 </div>
 
-                <h3 className="text-3xl md:text-5xl font-serif font-bold text-white mb-8 leading-tight tracking-tight">
+                <h3 id={`solution-title-${idx}`} className="text-3xl md:text-5xl font-serif font-bold text-white mb-8 leading-tight tracking-tight">
                   {item.title}
                 </h3>
                 <p className="text-slate-300 text-lg md:text-xl leading-relaxed font-light mb-10">
