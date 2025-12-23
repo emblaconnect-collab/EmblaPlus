@@ -34,7 +34,7 @@ const Solutions: React.FC = () => {
       <div className="container mx-auto px-6 mb-20 md:mb-40 text-center relative z-10">
         <div className="inline-flex items-center gap-3 px-4 py-2 mb-8 rounded-full border border-teal-500/20 bg-teal-500/5 backdrop-blur-md">
           <Sparkles size={14} className="text-teal-400" aria-hidden="true" />
-          <span className="text-teal-500 font-bold uppercase tracking-[0.4em] text-[10px]">Modelos de Entrega</span>
+          <span className="text-teal-500 font-bold uppercase tracking-[0.3em] text-[10px]">Modelos de Entrega</span>
         </div>
         <h2 className="text-5xl md:text-9xl font-serif font-bold text-white mb-8 tracking-tighter leading-[0.9]">
           Arquitetura de <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500">Resultados.</span>
@@ -50,6 +50,7 @@ const Solutions: React.FC = () => {
               className={`relative bg-slate-900/20 backdrop-blur-xl border rounded-[3.5rem] group overflow-hidden h-[550px] md:h-[650px] transition-all duration-700 shadow-2xl ${
                 activeTab === idx ? 'border-teal-500/50 shadow-teal-500/10' : 'border-white/5 hover:border-teal-500/30'
               }`}
+              aria-label={`${item.title} - ${item.description}`}
             >
               {/* Animated Glow Back */}
               <div className="absolute top-0 right-0 w-48 h-48 bg-teal-500/5 rounded-full blur-[80px] group-hover:bg-teal-500/10 transition-all duration-1000" aria-hidden="true"></div>
@@ -107,7 +108,7 @@ const Solutions: React.FC = () => {
                     className="w-14 h-14 bg-teal-500/10 rounded-2xl flex items-center justify-center text-teal-400 border border-teal-500/20 shadow-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
                     aria-label="Fechar especificações"
                   >
-                    <ChevronUp size={28} className="rotate-180" />
+                    <ChevronUp size={28} className="rotate-180" aria-hidden="true" />
                   </button>
                 </div>
 
