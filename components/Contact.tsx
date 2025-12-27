@@ -93,7 +93,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <p className="text-slate-400 text-[10px] uppercase font-bold tracking-widest">Onde estamos</p>
-                  <p className="text-white text-base md:text-lg font-medium">R. Vicente Bombini, 462 - Limeira, São Paulo</p>
+                  <p className="text-white text-base md:text-lg font-medium">R. Vicente Bombini, 462 - São Paulo</p>
                 </div>
               </div>
             </div>
