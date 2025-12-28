@@ -19,7 +19,7 @@ const projects: Project[] = [
   { 
     category: "Autoridade", 
     title: "Nitrotune Performance", 
-    image: "https://res.cloudinary.com/dnmnluf97/image/upload/f_webp,q_80,w_800/v1766409408/D_corart_1200x1600_v5w48l.png", 
+    image: "/images/nitrotune-project.avif", 
     delay: 100,
     link: "https://nitrotune.netlify.app/",
     features: [
