@@ -23,10 +23,10 @@ const projects: Project[] = [
     delay: 100,
     link: "https://nitrotune.netlify.app/",
     features: [
-      "Assistente IA Contextual",
-      "Motor Multilíngue Dinâmico",
-      "Estrutura de SEO de Alta Intenção",
-      "Arquitetura de Credibilidade"
+      "Sistema Multilíngue com 5 Idiomas",
+      "Arquitetura de Credibilidade com Prova Social",
+      "Estrutura de Autoridade Premium",
+      "Navegação Estratégica por Níveis de Consciência"
     ]
   },
   { 
