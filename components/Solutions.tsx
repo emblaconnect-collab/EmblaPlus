@@ -87,48 +87,48 @@ const Solutions: React.FC = () => {
                 </div>
               </button>
 
-              {/* Specification Layer Face */}
-              <div className={`absolute inset-0 bg-slate-950/95 backdrop-blur-[40px] p-10 md:p-16 flex flex-col transition-all duration-300 border-t-2 border-teal-500/20 ${
+              {/* Specification Layer Face - COMPACTED */}
+              <div className={`absolute inset-0 bg-slate-950/98 backdrop-blur-[40px] p-8 md:p-12 flex flex-col transition-all duration-500 border-t-2 border-teal-500/20 ${
                 activeTab === idx ? 'translate-y-0 opacity-100 pointer-events-auto' : 'translate-y-full opacity-0 pointer-events-none'
               }`}>
-                {/* Visual Pull Bar for context */}
-                <div className="flex justify-center mb-12">
-                  <div className="w-20 h-1.5 rounded-full bg-teal-500/20" aria-hidden="true"></div>
+                {/* Visual Pull Bar for context - Reduced margin */}
+                <div className="flex justify-center mb-6 md:mb-10">
+                  <div className="w-12 h-1 rounded-full bg-teal-500/30" aria-hidden="true"></div>
                 </div>
 
-                <div className="flex items-start justify-between mb-12">
+                <div className="flex items-start justify-between mb-8 md:mb-10">
                   <div>
-                    <span className="text-teal-500 font-black uppercase tracking-[0.5em] text-[9px] mb-3 block">Engenharia de Valor</span>
-                    <h4 className="text-white text-3xl md:text-4xl font-serif font-bold tracking-tight">Checklist Técnico</h4>
+                    <span className="text-teal-500 font-black uppercase tracking-[0.5em] text-[8px] mb-2 block">Engenharia de Valor</span>
+                    <h4 className="text-white text-2xl md:text-3xl font-serif font-bold tracking-tight">Checklist Técnico</h4>
                   </div>
                   <button 
                     onClick={() => setActiveTab(null)}
-                    className="w-14 h-14 bg-teal-500/10 rounded-2xl flex items-center justify-center text-teal-400 border border-teal-500/20 shadow-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    className="w-10 h-10 md:w-12 md:h-12 bg-teal-500/10 rounded-xl flex items-center justify-center text-teal-400 border border-teal-500/20 shadow-lg transition-transform hover:scale-105 active:scale-95"
                     aria-label="Fechar especificações"
                   >
-                    <ChevronUp size={28} className="rotate-180" aria-hidden="true" />
+                    <ChevronUp size={20} className="rotate-180" aria-hidden="true" />
                   </button>
                 </div>
 
-                <ul className="space-y-6 flex-grow overflow-y-auto pr-4 custom-scrollbar" aria-label={`Recursos de ${item.title}`}>
+                <ul className="space-y-4 md:space-y-5 flex-grow overflow-hidden" aria-label={`Recursos de ${item.title}`}>
                   {item.features.map((feature, fIdx) => (
                     <li 
                       key={fIdx} 
-                      className="flex items-start gap-6 group/feature border-b border-white/5 pb-6 last:border-0 transition-all hover:translate-x-1"
-                      style={{ transitionDelay: `${fIdx * 50}ms` }}
+                      className="flex items-center gap-4 group/feature border-b border-white/5 pb-4 last:border-0 transition-all hover:translate-x-1"
+                      style={{ transitionDelay: `${fIdx * 40}ms` }}
                     >
-                      <div className="mt-1.5 shrink-0 w-6 h-6 rounded-full bg-teal-500/10 border border-teal-500/30 flex items-center justify-center" aria-hidden="true">
-                        <CheckCircle size={14} className="text-teal-400" />
+                      <div className="shrink-0 w-5 h-5 rounded-full bg-teal-500/10 border border-teal-500/30 flex items-center justify-center" aria-hidden="true">
+                        <CheckCircle size={12} className="text-teal-400" />
                       </div>
-                      <span className="text-slate-100 text-xl md:text-2xl font-light leading-snug group-hover/feature:text-white transition-colors">
+                      <span className="text-slate-100 text-base md:text-lg font-light leading-tight group-hover/feature:text-white transition-colors">
                         {feature}
                       </span>
                     </li>
                   ))}
                 </ul>
 
-                <div className="mt-12 pt-10 border-t border-white/10 text-center">
-                   <p className="text-slate-500 text-[10px] uppercase tracking-[0.4em] font-black animate-pulse">Toque em qualquer área para voltar</p>
+                <div className="mt-6 pt-6 border-t border-white/5 text-center">
+                   <p className="text-slate-500 text-[8px] uppercase tracking-[0.4em] font-black">Toque em qualquer área para retornar</p>
                 </div>
               </div>
             </article>

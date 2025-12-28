@@ -18,10 +18,10 @@ const projects: Project[] = [
   },
   { 
     category: "Autoridade", 
-    title: "Agrovale Soluções Agrícolas", 
-    image: "https://res.cloudinary.com/dnmnluf97/image/upload/f_webp,q_80,w_800/v1766410460/agrovale_tecnologia_1200x1600_esflbx.png", 
+    title: "Nitrotune Performance", 
+    image: "https://res.cloudinary.com/dnmnluf97/image/upload/f_webp,q_80,w_800/v1766409408/D_corart_1200x1600_v5w48l.png", 
     delay: 100,
-    link: "https://stellular-swan-91800e.netlify.app/",
+    link: "https://nitrotune.netlify.app/",
     features: [
       "Assistente IA Contextual",
       "Motor Multilíngue Dinâmico",
