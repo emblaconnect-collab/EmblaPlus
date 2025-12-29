@@ -8,7 +8,7 @@ const projects: Project[] = [
     title: "Metal Forte Usinagem", 
     image: "/images/metalforte-industria.avif", 
     delay: 0,
-    link: "https://extraordinary-monstera-a27468.netlify.app/",
+    link: "https://glowing-mochi-eced81.netlify.app/",
     features: [
       "Linguagem Técnica Hiperespecífica (B2B Industrial)",
       "Formulário de Captura com Qualificação Avançada",
