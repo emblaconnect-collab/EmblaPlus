@@ -4,15 +4,15 @@ import { ExternalLink, CheckCircle2, ArrowRight, Sparkles } from 'lucide-react';
 
 const projects: Project[] = [
   { 
-    category: "Conversão", 
-    title: "D'corart Móveis Planejados", 
-    image: "https://res.cloudinary.com/dnmnluf97/image/upload/f_webp,q_80,w_800/v1766409408/D_corart_1200x1600_v5w48l.png", 
+    category: "Autoridade", 
+    title: "Metal Forte Usinagem", 
+    image: "/images/metalforte-industria.avif", 
     delay: 0,
-    link: "https://legendary-begonia-acc67a.netlify.app/",
+    link: "https://extraordinary-monstera-a27468.netlify.app/",
     features: [
-      "Formulário de Captura Estratégica",
-      "Funil de Vendas Otimizado",
-      "Galeria de Projetos com CTAs",
+      "Linguagem Técnica Hiperespecífica (B2B Industrial)",
+      "Formulário de Captura com Qualificação Avançada",
+      "Galeria de Projetos com CTAs Técnicos ",
       "Navegação Mobile Fluida"
     ]
   },
