@@ -30,7 +30,7 @@ const projects: Project[] = [
     ]
   },
   { 
-    category: "Básica", 
+    category: "Conversão", 
     title: "Estúdio de Design", 
     image: "https://images.unsplash.com/photo-1551434678-e076c223a692?q=60&w=800&fm=webp", 
     delay: 200,
