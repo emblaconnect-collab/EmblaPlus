@@ -31,13 +31,14 @@ const projects: Project[] = [
   },
   { 
     category: "Conversão", 
-    title: "Estúdio de Design", 
-    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?q=60&w=800&fm=webp", 
+    title: "Estela & Co.", 
+    image: "/images/estela&co-joias.avif", 
     delay: 200,
     features: [
-      "Layout Minimalista Focado",
-      "Performance Web Core Vitals",
-      "Experiência Adaptativa Premium"
+      "Linguagem Emocional com Benefício Direto",
+      "CTAs de Conversão Rápida",
+      "Formulário Simplificado para Conversão",
+      "Seção Para Revendedoras"
     ]
   }
 ];
