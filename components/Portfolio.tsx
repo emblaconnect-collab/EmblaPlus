@@ -31,7 +31,7 @@ const projects: Project[] = [
   },
   { 
     category: "Conversão", 
-    title: "Estela & Co.", 
+    title: "Estela & Co. Semijóias", 
     image: "/images/estela&co-joias.avif", 
     delay: 200,
     features: [
